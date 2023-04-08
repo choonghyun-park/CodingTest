@@ -169,36 +169,6 @@ for r in permutation(['A', 'B', 'C', 'D'], 2):
 ['D', 'C']
 '''
 ```
-### 순열 - itertools
-삼성 코테에서 itertools를 만약 사용 가능하다면 아래 방법으로 더 쉽게 구할 수 있다.
-```py
-from itertools import permutations
-
-# permutations(iterable, r)
-# iterable의 원소들을 이용해 길이가 r인 순열을 생성한다.
-# 리턴값은 순열 튜플의 이터레이터다.
-
-data = "ABCD"
-result = permutations(data, 2) # <itertools.permutations object at 0x7ff96110ee90>
-
-for r in result:
-    print(r)
-    
-# --- Result ---
-'''
-('A', 'B')
-('A', 'C')
-('A', 'D')
-('B', 'A')
-('B', 'C')
-('B', 'D')
-('C', 'A')
-('C', 'B')
-('C', 'D')
-('D', 'A')
-('D', 'B')
-('D', 'C')
-```
 
 ### 조합
 ```py
@@ -237,6 +207,37 @@ for r in combination(['A', 'B', 'C', 'D'], 2):
 ['B', 'D']
 ['C', 'D']
 '''
+```
+
+### 순열 - itertools
+삼성 코테에서 itertools를 만약 사용 가능하다면 아래 방법으로 더 쉽게 구할 수 있다.
+```py
+from itertools import permutations
+
+# permutations(iterable, r)
+# iterable의 원소들을 이용해 길이가 r인 순열을 생성한다.
+# 리턴값은 순열 튜플의 이터레이터다.
+
+data = "ABCD"
+result = permutations(data, 2) # <itertools.permutations object at 0x7ff96110ee90>
+
+for r in result:
+    print(r)
+    
+# --- Result ---
+'''
+('A', 'B')
+('A', 'C')
+('A', 'D')
+('B', 'A')
+('B', 'C')
+('B', 'D')
+('C', 'A')
+('C', 'B')
+('C', 'D')
+('D', 'A')
+('D', 'B')
+('D', 'C')
 ```
 
 ### 조합 - itertools
