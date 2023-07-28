@@ -9,6 +9,9 @@
 * 순열
 * 조합
 
+## 백준 삼성역량테스트 기출리스트
+[링크](https://www.acmicpc.net/workbook/view/1152)
+
 ## 참고 포스팅
 [포스팅 1](https://kimjingo.tistory.com/205)
 
