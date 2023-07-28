@@ -88,7 +88,6 @@ while(turns<=1000):
         col = horse["col"]
         dir = horse["dir"]
         dir_tuple = directions[dir]
-        cur_color = board[row][col]
         horse_num = i+1
         
         # 다음 이동할 위치
@@ -109,6 +108,7 @@ while(turns<=1000):
                 next_row = rev_row                  # go backward
                 next_col = rev_col
                 next_color = rev_color
+        # 이동
         cur_stack = copy.deepcopy(metadata[(row,col)])  # 말이 쌓인 상태 확인
         left_stack = []                                 # 남겨진 말
         for h in cur_stack:
@@ -119,7 +119,7 @@ while(turns<=1000):
         moved_stack = copy.deepcopy(cur_stack)          # 이동할 말 결정
         
         if next_color == 1:
-            moved_stack = reversed_list(moved_stack)    # 움직일 말의 순서 거꾸로 하기
+            moved_stack = reversed_list(moved_stack)    # 빨강 : 움직일 말의 순서 거꾸로 하기
 
         if len(left_stack)==0:                          # 현재 칸에 남은 말이 없는 경우
             del(metadata[(row,col)])
